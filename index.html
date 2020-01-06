@@ -13,15 +13,14 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- ===JS LINKS=== -->
     <!-- bootstrap -->
-    <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
     <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- app js -->
     <script src="assets/javascript/app.js"></script>
     <title>Random Selection Buddy</title>
@@ -38,13 +37,18 @@
                     <div class="card">
                         <h5 class="card-header">Application Options</h5>
                         <div class="card-body">
-                            <button type="button" class="btn btn-primary">Add Option</button>
+                            <button type="button" id="set-category-button" class="btn btn-primary">Set Category</button>
                             <br>
-                            <button type="button" class="btn btn-primary">Display All Options</button>
+                            <button type="button" id="add-option-button" class="btn btn-primary">Add Option</button>
                             <br>
-                            <button type="button" class="btn btn-warning">Remove Option</button>
+                            <button type="button" id="display-all-options-button" class="btn btn-primary">Display All
+                                Options</button>
                             <br>
-                            <button type="button" class="btn btn-danger">Clear All Options</button>
+                            <button type="button" id="remove-option-button" class="btn btn-warning">Remove
+                                Option</button>
+                            <br>
+                            <button type="button" id="clear-all-options-button" class="btn btn-danger">Clear All
+                                Options</button>
                         </div>
                     </div>
                     <div class="row">
@@ -64,15 +68,14 @@
                                     id="option-text-display"></span></h2>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success btn-lg btn-block">Make New Selection</button>
+                    <button type="button" id="make-selection-button" class="btn btn-success btn-lg btn-block">Make New Selection</button>
 
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
                         <h5 class="card-header">Other Useful Data</h5>
                         <div class="card-body">
-                            <h5 class="card-title">Overall Category: <span
-                                    id="category-text">NONE</span></h5>
+                            <h5 class="card-title">Overall Category: <span id="category-text">here I am</span></h5>
                             <h5 class="card-title">Total Number of Options Available: <span
                                     id="total-options-text">0</span></h5>
                             <h5 class="card-title">Total Number of Selections Made: <span
