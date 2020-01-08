@@ -24,28 +24,4 @@ $(document).ready(function () {
     })
 
     // code to add options
-    $("#add-option-button").on("click", function(){
-        var option = prompt("Please enter your desired selection option:");
-        options.push(option);
-        var addAnotherOption = confirm("Would you like to add another option?")
-        if(addAnotherOption === true){
-            option = prompt("Please enter your desired selection option:");
-            options.push(option);
-            addAnotherOption = confirm("Would you like to add another option?")
-        }else{
-            optionDisplayText.html("Your entry(s) have been added.")
-        }
-    })
-
-    $("#clear-all-options-button").on("click", function(){
-        options.length = 0;
-        optionDisplayText.html("Choice pool cleared");
-    })
-
-    // code to pick a selection
-    $("#make-selection-button").on("click", function(){
-        var randomChoice = Math.floor(Math.random() * options.length);
-        selection = options[randomChoice];
-        optionDisplayText.html(selection);
-    })
 });
