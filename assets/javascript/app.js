@@ -1,6 +1,6 @@
 var category;
-var options = ["dog", "cat", "rabbit", "mouse"];
-var totalOptions = options.length;
+var options = [];
+
 var totalSelections = 0;
 var selection;
 
@@ -11,7 +11,11 @@ var totalSelectionsDisplayText = $("#total-selections-text");
 var categoryDisplayText = $("#category-text");
 
 // code to update values
-
+function addOption(){
+    option = prompt("Please enter your desired selection option:");
+            options.push(option);
+            addAnotherOption = confirm("Would you like to add another option?")
+}
 
 // document ready
 $(document).ready(function () {
@@ -24,4 +28,10 @@ $(document).ready(function () {
     })
 
     // code to add options
+    $("#add-option-button").on("click", function(){
+        addOption();
+            do{
+                addOption();
+            }while(addAnotherOption === true);
+    })
 });
