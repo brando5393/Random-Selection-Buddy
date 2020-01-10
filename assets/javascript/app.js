@@ -23,7 +23,7 @@ $(document).ready(function () {
     $("#set-category-button").on("click", function () {
         category = prompt("Please enter your choice of category:");
         category = category.toUpperCase();
-        categoryDisplayText.html(category);
+        categoryDisplayText.text(category);
         console.log("category changed to " + category);
     })
 
@@ -33,5 +33,11 @@ $(document).ready(function () {
             do{
                 addOption();
             }while(addAnotherOption === true);
+    })
+
+    // code to display options
+    $("#make-selection-button").on("click", function(){
+        totalSelections ++;
+        totalSelectionsDisplayText.text(totalSelections);
     })
 });
