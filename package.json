@@ -1,0 +1,30 @@
+{
+  "name": "Random-Selection-Buddy",
+  "version": "1.0.0",
+  "description": "Hanging out with friends, have a great party game or a gift exchange? This simple app will help you to randomly select names, categories or any other bit of information that you would like to pick at random.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brando5393/Random-Selection-Buddy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brando5393/Random-Selection-Buddy/issues"
+  },
+  "homepage": "https://github.com/brando5393/Random-Selection-Buddy#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
